@@ -1,2 +1,7 @@
 <p>Hello {{ name }}!</p>
 <button type="button" (click)="onNameClick()">Enviar saludo!</button>
+<hr>
+<div>
+    <input type="text" [value]="inputName" (keyup)="updateInputName($event)">
+    <button type="button" (click)="addName()">Add name</button>
+</div>
