@@ -1,4 +1,4 @@
 <div>
     <h1 class="text-center">Let's learn Angular</h1>
-    <app-hello [name]="myName"></app-hello>
+    <app-hello [name]="myName" (sayHello)="onSayHello($event)"></app-hello>
 </div>
