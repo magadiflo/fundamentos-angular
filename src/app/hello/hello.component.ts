@@ -11,7 +11,7 @@ export class HelloComponent implements OnInit {
   @Output() sayHello: EventEmitter<string> = new EventEmitter();
 
   namesList: string[] = [];
-  inputName: string = 'asdf';
+  inputName: string = '';
 
   constructor() { }
 
@@ -26,11 +26,6 @@ export class HelloComponent implements OnInit {
     this.namesList.push(this.inputName);
     this.inputName = '';
     console.log(this.namesList);  
-  }
-
-  updateInputName(event: any): void {
-    this.inputName = event.target.value;
-    console.log(this.inputName);  
   }
 
 }
