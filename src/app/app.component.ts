@@ -6,9 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  titleStyles!: {};
+  counter: number = 0;
   
   onSayHello(sayHello: string) {
-    console.log(sayHello);  
+    console.log(sayHello);
+    this.counter++;
+    this.updateTitleStyles();
+  }
+
+  updateTitleStyles() {
+    this.titleStyles = {
+      'margin-top': '40px',
+      'color': this.counter < 3 ? 'green' : 'goldenrod',
+    }
   }
 
   updateNameClasses(name: string) {
