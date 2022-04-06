@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { LoggerService } from './services/logger.service';
+import { GreetingsService } from './services/greetings.service';
 
 @Component({
   selector: 'app-root',
@@ -10,20 +10,18 @@ import { LoggerService } from './services/logger.service';
 export class AppComponent {
 
   titleStyles!: {};
-  counter: number = 0;
 
-  constructor(private loggerService: LoggerService){}
+  constructor(private greetingService: GreetingsService){}
   
   onSayHello(sayHello: string) {
-    this.loggerService.log(sayHello);
-    this.counter++;
+    this.greetingService.handleGreeting(sayHello);
     this.updateTitleStyles();
   }
 
   updateTitleStyles() {
     this.titleStyles = {
       'margin-top': '40px',
-      'color': this.counter < 3 ? 'green' : 'goldenrod',
+      'color': this.greetingService.counter < 3 ? 'green' : 'goldenrod',
     }
   }
 
