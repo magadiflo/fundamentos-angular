@@ -1,5 +1,7 @@
 <div>
-    <h1 class="text-center">Let's learn Angular</h1>
+    <h1 [style.font-size.%]="myHelloComponent.namesList.length > 0 ? '200': '150'"
+        [style.color]="myHelloComponent.namesList.length > 0 ? 'red': 'black'" 
+        class="text-center">Let's learn Angular</h1>
     <div [class.hidden]="myHelloComponent.inputName.length == 0">Writting '{{myHelloComponent.inputName}}' in HelloComponent</div>
     <app-hello #myHelloComponent [name]="myName" (sayHello)="onSayHello($event)"></app-hello>
 </div>
