@@ -1,7 +1,7 @@
 <p *ngFor="let item of namesList; let i = index;">{{ i }} Hello {{ item }}!</p>
 <button type="button" (click)="onNameClick()">Enviar saludo!</button>
 <hr>
-<div>
+<div *ngIf="namesList.length < 5">
     <div>{{ inputName }}</div>
     <input type="text" [(ngModel)]="inputName" aria-label="Campo para ingreso de datos">
     <button type="button" (click)="addName()">Add name</button>
