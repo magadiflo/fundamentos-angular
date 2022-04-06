@@ -4,4 +4,12 @@
         class="text-center">Let's learn Angular</h1>
     <div [class.hidden]="myHelloComponent.inputName.length == 0">Writting '{{myHelloComponent.inputName}}' in HelloComponent</div>
     <app-hello #myHelloComponent [name]="myName" (sayHello)="onSayHello($event)"></app-hello>
+
+    <app-hello name="Tinkler"></app-hello>
+
+    <app-hello name="Gaspar"></app-hello>
+
+    <app-hello name="Alicia"></app-hello>
+
+    <app-hello name="Rachul"></app-hello>
 </div>
