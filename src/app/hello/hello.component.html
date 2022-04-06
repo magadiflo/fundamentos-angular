@@ -1,4 +1,4 @@
-<p>Hello {{ name }}!</p>
+<p *ngFor="let item of namesList; let i = index;">{{ i }} Hello {{ item }}!</p>
 <button type="button" (click)="onNameClick()">Enviar saludo!</button>
 <hr>
 <div>
