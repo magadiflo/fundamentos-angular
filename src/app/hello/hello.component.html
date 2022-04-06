@@ -1,4 +1,4 @@
-<p *ngFor="let item of namesList; let i = index;">{{ i }} Hello {{ item | slice: 0:1 | uppercase }}{{ item | slice: 1 | lowercase }}!</p>
+<p *ngFor="let item of namesList; let i = index;">{{ i }} Hello {{ item | upperCapital }}!</p>
 <button type="button" (click)="onNameClick()">Enviar saludo!</button>
 <hr>
 <div [ngSwitch]="namesList.length < 5">

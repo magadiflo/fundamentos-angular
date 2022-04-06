@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HelloComponent } from './hello/hello.component';
+import { UpperCapitalPipe } from './hello/pipes/upper-capital.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
+    UpperCapitalPipe,
   ],
   imports: [
     BrowserModule,
